@@ -1,4 +1,4 @@
 helixproject
 ============
 
-helixproject web pabes
+helixproject web pages
