@@ -1,4 +1,0 @@
-helixproject
-============
-
-helixproject web pages
