@@ -27,39 +27,43 @@
         </ul>
       </header>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>Project basic concepts</h3>
+        <p>Helixproject is service oriented platform. Service must simple and properly solve one concrete task.
+        For solving complex task used combination of services. For example, authorization and authentication is
+        concrete task for auth service, but realization of shop is combination of auth, billing, tariff, e.t.c.
+        services.</p>
+        <p>Interaction with services organized by json api over HTTP(S).
+        Api requests and responses are validates by json validator. Each service provides stand-alone usage.
+        For example, in billing service can be changed Authentificator for using external auth service.</p>
+        <p>Services has separated databases, configurations, deployment scripts. Creation and modification of
+        database structure or content performs by own simple patching system. Logic of services covered by tests.
+        Deployment is 'one button' operation. Deployment possible only if all tests of service passed.
+        </p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
+<!--
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
 </code></pre>
+ -->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <h3>Used technologies</h3>
+        <ul>
+            <li>Service logic - <a href="http://www.python.org">Python2.7</a></li>
+            <li>Service api - <a href="http://nginx.com">Nginx</a> + <a href="http://projects.unbit.it/uwsgi/">uWSGI</a></li>
+            <li>Database - <a href="http://www.postgresql.org">PostgreSQL</a></li>
+            <li>Testing - <a href="http://docs.python.org/2/library/unittest.html">unittest</a></li>
+            <li>Deployment - <a href="http://fabfile.org">Fabric</a>
+        </ul>
 
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
     </div>
+
     <footer>
       <p>Project maintained by <a href="https://github.com/sand8080">sand8080</a></p>
       <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
 </html>
