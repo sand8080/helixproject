@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Helixproject by sand8080</title>
+    <title>Helixproject</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -18,18 +18,21 @@
     <div class="wrapper">
       <header>
         <h1>Helixproject</h1>
-        <p>helixproject web pages</p>
-        <p class="view"><a href="https://github.com/sand8080/helixproject">View the Project on GitHub <small>sand8080/helixproject</small></a></p>
+        <p>&nbsp;</p>
+        <p class="view">
+            <a href="https://github.com/sand8080/helixproject">View the Project on GitHub <small>sand8080/helixproject</small></a>
+        </p>
         <ul>
-          <li><a href="https://github.com/sand8080/helixproject/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/sand8080/helixproject/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/sand8080/helixproject">View On <strong>GitHub</strong></a></li>
+          <li class="selected"><a href="."><strong>Concepts</strong></a></li>
+          <li><a href="/auth"><strong>Auth</strong></a></li>
+          <li><a href="/billing"><strong>Billing</strong></a></li>
+          <li><a href="/web"><strong>Web</strong></a></li>
         </ul>
       </header>
       <section>
         <h3>Project basic concepts</h3>
-        <p>Helixproject is service oriented platform. Service must simple and properly solve one concrete task.
-        For solving complex task used combination of services. For example, authorization and authentication is
+        <p>Helixproject is service oriented platform. Service must solve one concrete task simple and properly.
+        For solving complex tasks used combination of services. For example, authorization and authentication is
         concrete task for auth service, but realization of shop is combination of auth, billing, tariff, e.t.c.
         services.</p>
         <p>Interaction with services organized by json api over HTTP(S).
@@ -52,6 +55,7 @@ $ git checkout gh-pages
             <li>Service logic - <a href="http://www.python.org">Python2.7</a></li>
             <li>Service api - <a href="http://nginx.com">Nginx</a> + <a href="http://projects.unbit.it/uwsgi/">uWSGI</a></li>
             <li>Database - <a href="http://www.postgresql.org">PostgreSQL</a></li>
+            <li>Web interface - <a href="https://www.djangoproject.com">Django</a></li>
             <li>Testing - <a href="http://docs.python.org/2/library/unittest.html">unittest</a></li>
             <li>Deployment - <a href="http://fabfile.org">Fabric</a>
         </ul>
