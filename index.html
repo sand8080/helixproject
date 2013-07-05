@@ -1,73 +1,73 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Helixproject</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Helixproject</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="static/css/base.css">
+        <link rel="stylesheet" href="static/css/jquery-ui/current-theme/jquery-ui.custom.css">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Helixproject</h1>
-        <p>&nbsp;</p>
-        <p class="view">
-            <a href="https://github.com/sand8080/helixproject">View the Project on GitHub <small>sand8080/helixproject</small></a>
-        </p>
-        <ul>
-          <li class="selected"><a href="."><strong>Concepts</strong></a></li>
-          <li><a href="/auth"><strong>Auth</strong></a></li>
-          <li><a href="/billing"><strong>Billing</strong></a></li>
-          <li><a href="/web"><strong>Web</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Project basic concepts</h3>
-        <p>Helixproject is service oriented platform. Service must solve one concrete task simple and properly.
-        For solving complex tasks used combination of services. For example, authorization and authentication is
-        concrete task for auth service, but realization of shop is combination of auth, billing, tariff, e.t.c.
-        services.</p>
-        <p>Interaction with services organized by json api over HTTP(S).
-        Api requests and responses are validates by json validator. Each service provides stand-alone usage.
-        For example, in billing service can be changed Authentificator for using external auth service.</p>
-        <p>Services has separated databases, configurations, deployment scripts. Creation and modification of
-        database structure or content performs by own simple patching system. Logic of services covered by tests.
-        Deployment is 'one button' operation. Deployment possible only if all tests of service passed.
-        </p>
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/jquery-ui.js"></script>
 
-<!--
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
- -->
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-        <h3>Used technologies</h3>
-        <ul>
-            <li>Service logic - <a href="http://www.python.org">Python2.7</a></li>
-            <li>Service api - <a href="http://nginx.com">Nginx</a> + <a href="http://projects.unbit.it/uwsgi/">uWSGI</a></li>
-            <li>Database - <a href="http://www.postgresql.org">PostgreSQL</a></li>
-            <li>Web interface - <a href="https://www.djangoproject.com">Django</a></li>
-            <li>Testing - <a href="http://docs.python.org/2/library/unittest.html">unittest</a></li>
-            <li>Deployment - <a href="http://fabfile.org">Fabric</a>
-        </ul>
+        <script>
+            $( function() {
+                $( "input:submit, button", ".control" ).button();
+            });
 
-      </section>
-    </div>
+            $(function() {
+                $( "#tabs" ).tabs();
+            });
+        </script>
 
-    <footer>
-      <p>Project maintained by <a href="https://github.com/sand8080">sand8080</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    </head>
 
-  </body>
+    <body>
+
+        <table class="main center ui-widget">
+            <tr>
+                <th>
+                    <h3 class="ui-widget-header">Helixproject</h3>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Helixproject is service oriented platform. It realise set of services required in every-day
+                        business purposes such as authorization and authentication, billing, tariff.
+                        Each service can be used in standalone mode or together with other helix services.
+                        For example billing service can use external auth service or helix auth service.
+                    </p>
+
+                    Details of helix services:
+
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-auth">Auth</a></li>
+                            <li><a href="#tabs-billing">Billing</a></li>
+                            <li><a href="#tabs-tariff">Tariff</a></li>
+                        </ul>
+
+                         <div id="tabs-auth">
+                            <h4>Authentication and authorization service</h4>
+                         </div>
+                         <div id="tabs-billing">
+                            <h4>Billing service</h4>
+                         </div>
+                         <div id="tabs-tariff">
+                             <h4>Tariff service</h4>
+                         </div>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+
+    </body>
 </html>
