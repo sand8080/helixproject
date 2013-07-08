@@ -44,6 +44,14 @@
                         Each service can be used in standalone mode or together with other helix services.
                         For example billing service can use external auth service or helix auth service.
                     </p>
+                    <p>
+                        Check <a href="https://demo.helixproject.ws/">demo</a> of web-interface realised on Helixproject
+                        services for details.
+                        Services has simple JSON based API with validation of request and response structure and types.
+                        API scheme generates dynamically by methods of service and can be found at
+                        <a href="https://demo.helixproject.ws/auth/get_api_scheme">demo in api scheme section</a>.
+
+                    </p>
 
                     Details of helix services:
 
@@ -55,7 +63,53 @@
                         </ul>
 
                          <div id="tabs-auth">
-                            <h4>Authentication and authorization service</h4>
+                             <b>Authentication and authorization service</b>
+
+                             <p>
+                                 Purpose of auth service is authentication and authorization of users. This is place of
+                                 managing access to services. Auth service can be used from external systems for
+                                 checking access of users to methods of service. Any service can be added and described
+                                 into auth.
+                             </p>
+
+                             <p>
+                                 In auth service used such concepts as: environment, user, service, group, notification,
+                                 action log. Let's watch closer on each of it.
+                             </p>
+
+                             <p>
+                                 <b>Environment</b><br>
+                                 Environment is a container isolated from other environments. So users, services, groups,
+                                 e.t.c. are creates in scope of environment and not reachable from another environments.
+                                 Anyone and anything from one environment can't be moved or used in context of other
+                                 environment. Environment concept required, for example, for handling different
+                                 organisations on the same instance of Helixproject platform.
+                             </p>
+
+                             <p>
+                                 <b>Service</b><br>
+                                 Service has name, type and properties. Type is unique service identifier used in
+                                 other services for checking access of user to service properties (methods).<br>
+                                 Name of service is human readable description of service.<br>
+                                 Properties is list of methods of service. Access control checks on level of properties.
+                                 This means that on checking access we have user, service, property and calculates
+                                 current user rights for detecting is access allowed.
+                             </p>
+
+
+                             <p>
+                                 <b>Group</b><br>
+                                 User has login (email) password and settings
+                             </p>
+
+                             <p>
+                                 <b>User</b><br>
+                                 User has login (email) password and settings
+                             </p>
+
+
+
+
                          </div>
                          <div id="tabs-billing">
                             <h4>Billing service</h4>
