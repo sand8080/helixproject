@@ -68,19 +68,21 @@
                              <p>
                                  Purpose of auth service is authentication and authorization of users. This is place of
                                  managing access to services. Auth service can be used from external systems for
-                                 checking access of users to methods of service. Any service can be added and described
-                                 into auth.
+                                 checking access of users to methods of service. Any service can be added into auth
+                                 and described.
                              </p>
 
                              <p>
-                                 In auth service used such concepts as: environment, user, service, group, notification,
-                                 action log. Let's watch closer on each of it.
+                                 In auth service used such components as: environment, user, service, group, notification,
+                                 action log, session. Let's watch closer on each of it.
                              </p>
 
                              <p>
                                  <b>Environment</b><br>
-                                 Environment is a container isolated from other environments. So users, services, groups,
-                                 e.t.c. are creates in scope of environment and not reachable from another environments.
+
+                                 Environment is a container isolated from other environments. Environments are like a
+                                 boxes with toys. So users, services, groups e.t.c. are created in scope of environment
+                                 and not reachable from another environments.
                                  Anyone and anything from one environment can't be moved or used in context of other
                                  environment. Environment concept required, for example, for handling different
                                  organisations on the same instance of Helixproject platform.
@@ -90,16 +92,27 @@
                                  <b>Service</b><br>
                                  Service has name, type and properties. Type is unique service identifier used in
                                  other services for checking access of user to service properties (methods).<br>
+
                                  Name of service is human readable description of service.<br>
+
                                  Properties is list of methods of service. Access control checks on level of properties.
                                  This means that on checking access we have user, service, property and calculates
-                                 current user rights for detecting is access allowed.
+                                 current user rights for detecting is access allowed.<br>
+
+                                 Service can be deactivated, modified name and type.
                              </p>
 
 
                              <p>
                                  <b>Group</b><br>
-                                 User has login (email) password and settings
+                                 Group is definition of services access rules. Group has name, can be deactivated and
+                                 can be default. Default groups used in user creation as possible set of user groups
+                                 membership. While environment creates set of groups (Users, Administrators) will be
+                                 also created.<br>
+
+                                 For example, in group Users for service Auth allowed access to property get_user_rights.
+                                 User can be member of several groups. Access to service property is allowed if in any
+                                 of active user groups access is allowed.
                              </p>
 
                              <p>
