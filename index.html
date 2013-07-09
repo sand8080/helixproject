@@ -46,8 +46,13 @@
                     </p>
                     <p>
                         Check <a href="https://demo.helixproject.ws/">demo</a> of web-interface realised on Helixproject
-                        services for details.
+                        services for details.<br>
+
                         Services has simple JSON based API with validation of request and response structure and types.
+                        Validation of requests guarantees data for processing is correct and make developers of
+                        Helixproject happy. Responses validation guarantees correct format and types and make
+                        developers uses API happy.<br>
+
                         API scheme generates dynamically by methods of service and can be found at
                         <a href="https://demo.helixproject.ws/auth/get_api_scheme">demo in api scheme section</a>.
 
@@ -58,8 +63,10 @@
                     <div id="tabs">
                         <ul>
                             <li><a href="#tabs-auth">Auth</a></li>
+                            <!--
                             <li><a href="#tabs-billing">Billing</a></li>
                             <li><a href="#tabs-tariff">Tariff</a></li>
+                            -->
                         </ul>
 
                          <div id="tabs-auth">
@@ -106,9 +113,9 @@
                              <p>
                                  <b>Group</b><br>
                                  Group is definition of services access rules. Group has name, can be deactivated and
-                                 can be default. Default groups used in user creation as possible set of user groups
-                                 membership. While environment creates set of groups (Users, Administrators) will be
-                                 also created.<br>
+                                 can be default. All properties of group can be changed. Default groups used in user
+                                 creation as possible set of user groups membership. While environment creates set of
+                                 groups (Users, Administrators) will be also created.<br>
 
                                  For example, in group Users for service Auth allowed access to property get_user_rights.
                                  User can be member of several groups. Access to service property is allowed if in any
